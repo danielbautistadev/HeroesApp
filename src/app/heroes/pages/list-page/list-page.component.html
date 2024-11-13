@@ -1,1 +1,7 @@
-<p>list-page works!</p>
+<span [ngStyle]="{'font-size':'22px','display':'inline-block','padding':'10px 20px','font-weight':'900'}">Listado de Héroes</span>
+<mat-divider></mat-divider>
+<div class="grid mb-8 pt-2">
+    <div class="col-12 sm:col-6 md:col-4 lg:col-3" *ngFor="let hero of heroes">
+        <heroes-hero-card [hero]="hero"></heroes-hero-card>
+    </div>
+</div>

@@ -128,14 +128,6 @@
       "characters": "Bruce Banner"
     },
     {
-      "id": "marvel-wolverine",
-      "superhero": "Wolverine",
-      "publisher": "Marvel Comics",
-      "alter_ego": "James Howlett",
-      "first_appearance": "The Incredible Hulk #180",
-      "characters": "James Howlett"
-    },
-    {
       "id": "marvel-daredevil",
       "superhero": "Daredevil",
       "publisher": "Marvel Comics",
@@ -168,10 +160,20 @@
       "characters": "Norrin Radd"
     },
     {
-      "id": "456f"
+      "id": "marvel-wolverine",
+      "superhero": "Wolverine",
+      "publisher": "Marvel Comics",
+      "alter_ego": "James Howlett",
+      "first_appearance": "The Incredible Hulk #180",
+      "characters": "James Howlett"
     },
     {
-      "id": "0cb6"
+      "id": "marvel-JessicaJones",
+      "superhero": "Jessica Jones",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Brian Michael Bendis",
+      "first_appearance": "Alias # 1 (noviembre de 2001)",
+      "characters": "Krysten Ritter"
     }
   ]
 }
