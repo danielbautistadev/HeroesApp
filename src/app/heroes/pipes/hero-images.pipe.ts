@@ -8,13 +8,13 @@ export class HeroImagesPipe implements PipeTransform {
 
   transform(hero: Hero): string {
     
-    if (!hero.id && !hero.alt_img) { // Si el héroe no tiene id ni alt_img, reemplazamos la imagen por una por defecto
+    if (!hero.id && !hero.alt_img) {
       return '/no-image.png';
     }
 
-    if(hero.alt_img) return hero.alt_img; // Si el héroe tiene una imagen alternativa, la devolvemos como ruta de la imagen (https://www.example.com/heroes/dc-batman.jpg)
+    if(hero.alt_img) return hero.alt_img; // http://localhost:4200/no-image.png
 
-    return `/heroes/${hero.id}.jpg`; // Si el héroe tiene un id, devolvemos la ruta de la imagen en nuestro servidor local (/heroes/dc-batman.jpg)
+    return `/heroes/${hero.id}.jpg`;
 
   }
 

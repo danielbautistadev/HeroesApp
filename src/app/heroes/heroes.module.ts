@@ -11,6 +11,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
 import { HeroImagesPipe } from './pipes/hero-images.pipe';
+import { ImageUrlPipe } from './pipes/image-url.pipe';
 
 
 
@@ -24,7 +25,8 @@ import { HeroImagesPipe } from './pipes/hero-images.pipe';
     CardComponent,
 
     // Pipes
-    HeroImagesPipe
+    HeroImagesPipe,
+    ImageUrlPipe
   ],
   imports: [
     CommonModule,
