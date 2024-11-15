@@ -1,8 +1,8 @@
 <mat-sidenav-container fullscreen>
-    <mat-sidenav #sidenav mode="side" class="sidebar-container">
+    <mat-sidenav #sidenav mode="over" class="sidebar-container">
         <!-- Sidebar content goes here -->
-        <h5 [ngStyle]="{'margin-top':'.5em','padding':'0 .5em'}">Sidebar</h5>
-        <hr>
+        <h5 class="m-3">Sidebar</h5>
+        <mat-divider></mat-divider>
         <mat-list>
             <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
                 <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
@@ -13,12 +13,12 @@
     <mat-sidenav-content>
         <!-- Main content goes here -->
 
-        <mat-toolbar class="toolbar">
-            <span [ngStyle]="{'color':'white'}">My Application</span>
-            <span class="toolbar-spacer"></span>
+        <mat-toolbar class="bg-primary">
+            <span class="text-white">Héroes</span>
+            <span class="spacer"></span>
             <!-- <mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon> -->
              <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon>
+                <mat-icon [ngStyle]="{'color':'white'}">menu</mat-icon>:
              </button>
         </mat-toolbar>
         <div class="container">

@@ -1,1 +1,51 @@
-<p>hero-page works!</p>
+<ng-template #heroesLoading>
+    <div class="container">
+        <!-- <mat-grid-list cols="1">
+            <mat-grid-tile>
+                <mat-spinner></mat-spinner>
+            </mat-grid-tile>
+        </mat-grid-list> -->
+        <!-- <div class="col">
+            <div class="flex flex-wrap align-items-center justify-content-center">
+                <div class="bg-center">
+                    <mat-spinner></mat-spinner>
+                </div>
+            </div>    
+        </div> -->
+        <mat-spinner></mat-spinner>        
+    </div>
+</ng-template>
+
+<div class="container">
+    <div class="grid m-0" *ngIf="hero; else heroesLoading">
+        <div class="col-12 md:col-4 lg:col-3">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+                    <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+                </mat-card-header>
+    
+                <img [src]="hero | heroImages" [alt]="hero.superhero" mat-card-image>
+            </mat-card>
+        </div>
+        <div class="col-12 md:col-8 lg:col-9">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Información:</mat-card-title>
+                    <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">{{ hero.first_appearance }}</mat-list-item>
+                        <mat-list-item role="listitem">{{ hero.characters }}</mat-list-item>
+                        <mat-list-item role="listitem">{{ hero.publisher }}</mat-list-item>
+                        <mat-list-item role="listitem">{{ hero.alter_ego }}</mat-list-item>
+                    </mat-list>
+                    <button mat-button color="warn" (click)="goback()">Regresar</button>
+                </mat-card-content>
+            </mat-card>  
+        </div>
+        
+    </div>
+</div>
+
