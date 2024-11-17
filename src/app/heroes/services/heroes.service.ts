@@ -28,5 +28,9 @@ export class HeroesService {
                 // Nota: of es un creador de observables en RxJS. Cuando usas of, genera un observable que emite los valores que le pasas como argumentos, en el orden en el que los proporcionas, y luego se completa. En este caso, estamos creando un observable que emite el valor undefined y luego se completa, lo que significa que cualquier suscriptor recibirá el valor undefined y luego la notificación de que el observable se ha completado.
             );
     }
+
+    getSuggetions( query: string ): Observable<Hero[]> { 
+        return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${ query }&_limit=6`);
+    }
     
 }

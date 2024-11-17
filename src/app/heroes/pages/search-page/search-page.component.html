@@ -1,1 +1,36 @@
-<p>search-page works!</p>
+<div class="flex flex-column p-2">
+    <h3>Buscador:</h3>
+    <mat-form-field>
+        <mat-label>Buscar por heroes</mat-label>
+        <input 
+            type="text"
+            matInput
+            [formControl]="searchInput"
+            (input)="searchHero()"
+            [matAutocomplete]="auto" />
+        <mat-autocomplete 
+            autoActiveFirstOption 
+            #auto="matAutocomplete"
+            (optionSelected)="onSelectedOption($event)">
+            <mat-option *ngFor="let hero of heroes" [value]="hero">
+                {{ hero.superhero }}
+            </mat-option>
+            <mat-option 
+                *ngIf="heroes.length == 0 && searchInput.value && searchInput.value.length > 0" 
+                value="">
+                No se encontró nada con el término {{ searchInput.value }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+    {{ selectedHero | json }}
+
+    <!-- {{ searchInput.value | json }} <br> Muestra el valor actual del control de formulario -->
+    <!-- {{ searchInput.touched | json }} <br> Muestra si el control de formulario ha sido tocado -->
+    <!-- {{ searchInput.pristine | json }}  Muestra si el control de formulario es pristino (no ha sido modificado) -->
+
+    <!-- El value vacío en el segundo mat-option simplemente tiene la función de devolver un valor vacío cuando no se encuentra ningún héroe que coincida con el término de búsqueda, así cuando el usuario ve el mensaje de "No se encontró nada con el término..." y selecciona esa opción, no está devolviendo un objeto héroe ni un texto específico sino un valor vacío que nos permite entender que no hay un resultado válido.  -->
+
+
+
+</div>
