@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://static.dc.com/dc/files/default_images/SM_01_300-001_HD_5b85ed26232a96.67207200.jpg?w=640"
     },
     {
       "id": "dc-flash",
@@ -174,6 +175,15 @@
       "alter_ego": "Desconocido",
       "first_appearance": "Desconocido",
       "characters": "Desconocido"
+    },
+    {
+      "id": "14Kx58T",
+      "superhero": "Black Panther",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Cheryl Eaton",
+      "first_appearance": "Blood Hunt (2024) #3",
+      "characters": "Cheryl Eaton",
+      "alt_img": "https://cdn.marvel.com/u/prod/marvel/i/mg/4/60/6679754b99c1a/clean.jpg"
     }
   ]
 }
