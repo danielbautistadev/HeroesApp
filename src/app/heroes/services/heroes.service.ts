@@ -47,12 +47,12 @@ export class HeroesService {
         return this.http.patch<Hero>(`${this.baseUrl}/heroes/${ hero.id }`, hero);
     }
 
-    deleteHero( id: string ): Observable<boolean> { 
+    deleteHeroById( id: string ): Observable<boolean> { 
         // 1. Retoornamos un Observable que emite un booleano indicando si la petición se completó con éxito o no. Usamos el método delete de HttpClient para eliminar el héroe de la api. El método delete de HttpClient recibe como argumento la url de la api. El método delete de HttpClient retorna un Observable que emite un booleano indicando si la petición se completó con éxito o no. Usamos el operador pipe para manejar el error si no lo encuentra y retornamos un observable de tipo boolean con el valor de false. Usamos el operador map para transformar la respuesta del servidor en un booleano indicando si la petición se completó con éxito o no.
         return this.http.delete(`${this.baseUrl}/heroes/${ id }`)
            .pipe(
-                catchError( err => of(false) ),
-                map( resp => true )
+                map( resp => true ),
+                catchError( err => of(false) )                
            )
     }
 
