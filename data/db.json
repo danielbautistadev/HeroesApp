@@ -2,8 +2,18 @@
   "users": [
     {
       "id": 1,
-      "user": "John Doe",
-      "email": "john.due@gmail.com"
+      "user": "Erick Daniel",
+      "email": "erick.olano@gmail.com"
+    },
+    {
+      "id": 2,
+      "user": "Juan Daniel",
+      "email": "juan.olano@gmail.com"
+    },
+    {
+      "id": 3,
+      "user": "Maria Daniela",
+      "email": "maria.olano"
     }
   ],
   "heroes": [
